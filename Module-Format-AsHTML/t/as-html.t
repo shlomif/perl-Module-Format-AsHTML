@@ -2,7 +2,7 @@
 
 use strict;
 use warnings;
-use Test::More tests => 2;
+use Test::More tests => 3;
 
 use Module::Format::AsHTML ();
 
@@ -15,4 +15,11 @@ use Module::Format::AsHTML ();
     # TEST
     is( $cpan->homepage( { who => "shlomif" } ),
         "https://metacpan.org/author/SHLOMIF", "homepage" );
+
+    # TEST
+    is(
+        $cpan->self_dist( { d => "Module-Format" } ),
+qq{<a href="https://metacpan.org/release/Module-Format">Module-Format</a>},
+        "homepage"
+    );
 }
