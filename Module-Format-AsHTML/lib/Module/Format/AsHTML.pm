@@ -9,20 +9,20 @@ sub dist
 {
     my ( $self, $args ) = @_;
     return
-        qq#<a href="http://metacpan.org/release/$args->{d}">$args->{body}</a>#;
+        qq#<a href="https://metacpan.org/release/$args->{d}">$args->{body}</a>#;
 }
 
 sub homepage
 {
     my ( $self, $args ) = @_;
-    return qq#http://metacpan.org/author/\U$args->{who}\E#;
+    return qq#https://metacpan.org/author/\U$args->{who}\E#;
 }
 
 sub mod
 {
     my ( $self, $args ) = @_;
     return
-        qq#<a href="http://metacpan.org/module/$args->{m}">$args->{body}</a>#;
+        qq#<a href="https://metacpan.org/module/$args->{m}">$args->{body}</a>#;
 }
 
 sub module
