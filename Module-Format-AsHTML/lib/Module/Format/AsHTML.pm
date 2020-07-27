@@ -18,7 +18,7 @@ sub homepage
     return qq#http://metacpan.org/author/\U$args->{who}\E#;
 }
 
-sub mod_
+sub mod
 {
     my ( $self, $args ) = @_;
     return
@@ -28,7 +28,7 @@ sub mod_
 sub module
 {
     my ( $self, $args ) = @_;
-    return $self->mod_($args);
+    return $self->mod($args);
 }
 
 sub b_self_dist
@@ -46,7 +46,7 @@ sub self_dist
 sub self_mod
 {
     my ( $self, $args ) = @_;
-    return $self->mod_( { body => $args->{'m'}, %$args, } );
+    return $self->mod( { body => $args->{'m'}, %$args, } );
 }
 
 1;
@@ -94,7 +94,7 @@ Returns a link to 'm' with the text 'body'. (aliased for tt2/etc. friendliness).
 
 Returns a link to 'm' with its text defaulting to its name.
 
-=head2 $cpan->mod_ ({"m"=>"List::Util", body=>"$html"})
+=head2 $cpan->mod ({"m"=>"List::Util", body=>"$html"})
 
 Returns a link to 'm' with the text 'body'. (aliased for tt2/etc. friendliness).
 
