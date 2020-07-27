@@ -86,16 +86,16 @@ Returns a link to 'd' with the text 'body'.
 
 Homepage url to 'who'.
 
-=head2 $cpan->mod_({'m'=>"List::Util", body=>"$html"})
+=head2 $cpan->module ({'m'=>"List::Util", body=>"$html"})
 
 Returns a link to 'm' with the text 'body'. (aliased for tt2/etc. friendliness).
 
-=head2 $cpan->module({'m'=>"List::Util", body=>"$html"})
-
-Returns a link to 'm' with the text 'body'. (aliased for tt2/etc. friendliness).
-
-=head2 $cpan->self_mod({'m'=>"Path::Tiny"})
+=head2 $cpan->self_mod ({'m'=>"Path::Tiny"})
 
 Returns a link to 'm' with its text defaulting to its name.
+
+=head2 $cpan->mod_ ({"m"=>"List::Util", body=>"$html"})
+
+Returns a link to 'm' with the text 'body'. (aliased for tt2/etc. friendliness).
 
 =cut
