@@ -64,6 +64,23 @@ Module::Format::AsHTML - generate HTML links to metacpan module/dists pages.
 
     $html .= $cpan->self_mod({ 'm'=> "Path::Tiny"});
 
+=head1 DESCRIPTION
+
+Module::Format::AsHTML is a module to generate HTML hyperlinks and other HTML fragments
+for CPAN modules and distributions.
+
+It grew out of some incarnations of source codes used by some
+of my (= SHLOMIF) sites.
+
+One for example can pass:
+
+    'cpan' => Module::Format::AsHTML->new(),
+
+As a variable to L<https://metacpan.org/release/Template-Toolkit> and then use it
+in templates:
+
+    [% cpan.self_mod('m'=>"List::Util") %]
+
 =head1 METHODS
 
 =head2 my $cpan = Module::Format::AsHTML->new()
