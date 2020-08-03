@@ -64,6 +64,15 @@ Module::Format::AsHTML - generate HTML links to metacpan module/dists pages.
 
     $html .= $cpan->self_mod({ 'm'=> "Path::Tiny"});
 
+=head1 SECURITY WARNING!
+
+This module does not validate or sanitize its input and so may be susceptible to
+HTML injection / XSS issues (see L<https://perl-begin.org/topics/security/code-markup-injection/> ).
+This is expected given its origin as utility code for generating static sites.
+
+Please do not use it with input from possibly malicious sources or without sanitising it.
+In the future, this issue may be fixed.
+
 =head1 DESCRIPTION
 
 Module::Format::AsHTML is a module to generate HTML hyperlinks and other HTML fragments
